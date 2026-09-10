@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar Diagnóstico ADEKZ</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          heading: ['"Montserrat"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          body: ['"Open Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink: '#101828',
+          inksoft: '#475467',
+          border: '#E4E7EC',
+          accent: {
+            DEFAULT: '#2F5CFF',
+            dark: '#2544C9',
+            soft: '#EEF2FF',
+          },
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  body { background-color: #FFFFFF; }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(47, 92, 255, 0.35); }
+    50% { box-shadow: 0 0 0 14px rgba(47, 92, 255, 0); }
+  }
+  .cta-pulse { animation: pulseGlow 2.4s ease-in-out infinite; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; animation: fadeUp .7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  .reveal-1 { animation-delay: .05s; }
+  .reveal-2 { animation-delay: .2s; }
+</style>
+</head>
+<body class="font-body text-ink antialiased min-h-screen flex flex-col">
+
+  <header class="w-full px-6 py-6">
+    <span class="font-heading font-800 text-lg tracking-tight text-ink">ADEKZ</span>
+  </header>
+
+  <main class="flex-1 flex flex-col items-center justify-center text-center px-6 py-12">
+
+    <div class="reveal reveal-1 w-14 h-14 rounded-full bg-accent-soft border border-accent/20 flex items-center justify-center mb-7">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F5CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    </div>
+
+    <h1 class="reveal reveal-1 font-heading font-800 text-3xl sm:text-4xl leading-tight text-ink max-w-lg">
+      Agende agora mesmo seu diagnóstico de ativo operacional
+    </h1>
+
+    <p class="reveal reveal-1 mt-4 text-inksoft text-base sm:text-lg max-w-md">
+      Escolha o melhor horário na sua agenda e converse com a ADEKZ, sem espera e sem trocar mensagem.
+    </p>
+
+    <a href="https://calendar.app.google/XA7Gs3GTpja4gTe17"
+       target="_blank" rel="noopener noreferrer"
+       class="reveal reveal-2 cta-pulse mt-9 inline-flex items-center gap-3 bg-accent hover:bg-accent-dark text-white font-heading font-700 text-base sm:text-lg px-8 py-4 rounded-full transition-colors duration-300">
+      Agendar meu Diagnóstico
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+
+    <p class="reveal reveal-2 mt-3 text-xs text-inksoft">Abre o Google Calendar em uma nova aba</p>
+
+  </main>
+
+  <footer class="w-full px-6 py-6 text-center">
+    <p class="text-xs text-inksoft">ADEKZ · desde 2007 transformando processo manual em ativo digital próprio</p>
+  </footer>
+
+</body>
+</html>
